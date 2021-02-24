@@ -3,7 +3,7 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-var sayi1,sayi2;
+var sayi1,sayi2,sonuc;
 
 rl.question("ilk sayıyı giriniz : ", (s1) => {
     sayi1 = Number(s1);    
@@ -30,7 +30,21 @@ rl.question("ilk sayıyı giriniz : ", (s1) => {
                     }
                     else
                     {
-                        console.log(`${sayi1} ${islem} ${sayi2}`);
+                        switch (islem) {
+                            case '+':
+                              sonuc = sayi1+sayi2;
+                              break;
+                            case '-':
+                              sonuc = sayi1-sayi2;
+                              break;
+                            case '*':
+                              sonuc = sayi1*sayi2;
+                              break;
+                            case '/':
+                              sonuc = sayi1/sayi2;
+                              break;
+                        }
+                        console.log(`${sayi1} ${islem} ${sayi2} `+"="+` ${sonuc}`);
                         rl.close();
                     }
                 });
