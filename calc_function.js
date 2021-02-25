@@ -38,5 +38,14 @@ const calc = (num1, operator, num2) => {
         }
     return calcResult;    
 }
-
+//Hata donduren islemler
 console.log(calc('a','+','1'));
+console.log(calc('1','+','a'));
+console.log(calc('1','.','2'));
+console.log(calc('1','/','0'));
+//Hatasiz islemler
+console.log(calc('1','+','1'));
+console.log(calc('1','-','1'));
+console.log(calc('1','*','1'));
+console.log(calc('4','/','2'));
+
