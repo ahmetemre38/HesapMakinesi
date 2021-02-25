@@ -13,28 +13,28 @@ const calc = (num1, operator, num2) => {
         calcResult.result = 'Hesaplanamadı';
         calcResult.errors.push(`ikinci parametre sayı girilmedi!!!`);
     }
-        switch (operator) {
-            case '+':
+    switch (operator) {
+        case '+':
                 calcResult.result = number1 + number2;            
                 break;
-            case '-':
+        case '-':
                 calcResult.result = number1 - number2;
                 break;
-            case '*':
+        case '*':
                 calcResult.result = number1 * number2;
                 break;
-            case '/':
+        case '/':
                 if (number2 == 0) {
                     calcResult.errors.push('Sıfıra bölme hatası yapıldı!!!');
                     calcResult.result = 'Tanımsız';
                 }
                 else calcResult.result = number1 / number2;
                 break;
-            default:
+        default:
                 calcResult.result = 'Hesaplanamadı';
                 calcResult.errors.push('Operator yanlış girildi!!!')
                 break;        
-        }
+    }
     return calcResult;    
 }
 //Hata donduren islemler
