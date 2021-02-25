@@ -8,12 +8,11 @@ const calc = (num1, operator, num2) => {
         calcResult.result = 'Hesaplanamadı';
         calcResult.errors.push(`ilk parametre sayı girilmedi!!!`);
     }
-    else if (isNaN(number2) || number2==null)
+    if (isNaN(number2) || number2==null)
     {
         calcResult.result = 'Hesaplanamadı';
         calcResult.errors.push(`ikinci parametre sayı girilmedi!!!`);
     }
-    else
         switch (operator) {
             case '+':
                 calcResult.result = number1 + number2;            
@@ -39,13 +38,13 @@ const calc = (num1, operator, num2) => {
     return calcResult;    
 }
 //Hata donduren islemler
-console.log(calc('a','+','1'));
-console.log(calc('1','+','a'));
-console.log(calc('1','.','2'));
-console.log(calc('1','/','0'));
+//console.log(calc('a','+','1'));
+//console.log(calc('1','+','a'));
+//console.log(calc('1','.','2'));
+console.log(calc('a','/','0'));
 //Hatasiz islemler
-console.log(calc('1','+','1'));
-console.log(calc('1','-','1'));
-console.log(calc('1','*','1'));
-console.log(calc('4','/','2'));
+//console.log(calc('1','+','1'));
+//console.log(calc('1','-','1'));
+//console.log(calc('1','*','1'));
+//console.log(calc('4','/','2'));
 
