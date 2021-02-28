@@ -37,11 +37,13 @@ const calc = (num1, operator, num2) => {
     }
     return calcResult;    
 }
+module.exports.calc = calc;
+
 //Hata donduren islemler
 //console.log(calc('a','+','1'));
 //console.log(calc('1','+','a'));
 //console.log(calc('1','.','2'));
-console.log(calc('a','/','0'));
+//console.log(calc('a','/','0'));
 //Hatasiz islemler
 //console.log(calc('1','+','1'));
 //console.log(calc('1','-','1'));
